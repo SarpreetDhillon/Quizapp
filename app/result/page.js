@@ -2,11 +2,19 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function ResultPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const score = searchParams.get('score') || 0;
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    if (searchParams) {
+      const scoreParam = searchParams.get('score');
+      setScore(scoreParam ? parseInt(scoreParam, 10) : 0);
+    }
+  }, [searchParams]);
 
   return (
     <div className="container">
