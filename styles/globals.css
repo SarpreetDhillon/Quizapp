@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4e4; /* Light green background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    color: #2d6a4f; /* Darker green for headings */
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #2d6a4f; /* Green button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #1b4f33; /* Darker green for button hover */
+  }
+  
+  button:disabled {
+    background-color: #9fcf9f; /* Disabled button color */
+    cursor: not-allowed;
+  }
+  
+  button + button {
+    margin-left: 10px;
+  }
+  .progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .progress {
+    height: 10px;
+    background-color: #2d6a4f; /* Green color */
+    transition: width 0.3s;
+  }
+    

@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf4e4; /* Light green background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #2d6a4f; /* Darker green for headings */
+}
+
+button {
+  background-color: #2d6a4f; /* Green button background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1b4f33; /* Darker green for button hover */
+}
+
+button:disabled {
+  background-color: #9fcf9f; /* Disabled button color */
+  cursor: not-allowed;
+}
