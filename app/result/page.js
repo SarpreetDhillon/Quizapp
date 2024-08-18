@@ -1,21 +1,12 @@
 "use client";
 
+import { Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-export const dynamic = 'force-dynamic';
 
-export default function ResultPage() {
-  const router = useRouter();
+function ResultContent() {
   const searchParams = useSearchParams();
-  const [score, setScore] = useState(0);
-
-  useEffect(() => {
-    if (searchParams) {
-      const scoreParam = searchParams.get('score');
-      setScore(scoreParam ? parseInt(scoreParam, 10) : 0);
-    }
-  }, [searchParams]);
+  const score = searchParams.get('score') || 0;
 
   return (
     <div className="container">
@@ -25,5 +16,13 @@ export default function ResultPage() {
         <button>Go Home</button>
       </Link>
     </div>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResultContent />
+    </Suspense>
   );
 }
